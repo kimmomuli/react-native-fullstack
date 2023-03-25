@@ -14,7 +14,15 @@ const styles = StyleSheet.create({
   },
 });
 
-const AppBarTab = ({ title, route }) => {
+const AppBarTab = ({ title, route, onPress }) => {
+  if (onPress) {
+    return (
+      <Pressable onPress={onPress}>
+        <Text style={styles.tab}>{title}</Text>
+      </Pressable>
+    );
+  }
+
   return (
     <Link to={route} component={Pressable}>
       <Text style={styles.tab}>{title}</Text>
