@@ -31,7 +31,7 @@ const validationSchema = yup.object().shape({
 });
 
 
-const SignInForm = ({ onSubmit }) => {
+export const SignInForm = ({ onSubmit }) => {
   return (
     <View style={styles.container}>
       <FormikTextInput name="username" placeholder="Username" />
